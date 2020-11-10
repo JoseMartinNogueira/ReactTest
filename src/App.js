@@ -1,10 +1,23 @@
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import React, {useState} from 'react'
 import './App.css';
 import Col from 'react-bootstrap/esm/Col';
 
 function App() {
+  
+  const [textValue, setTextValue] = useState("");
+  const [translated, setTranslated] = useState("")
+
+  const translation = () => {
+    setTranslated(textValue.replace(/[aeou]/ig, 'i'))
+  }
+
+  const handleChange = (event) => {
+    setTextValue(event.target.value);
+  };
+console.log(textValue);
   return (
     <div className="App">
     <Form.Group>
@@ -13,10 +26,10 @@ function App() {
           Input Text
         </Form.Label>
         <Col>
-          <Form.Control as="textarea" rows={4} className= "big-text"/>
+          <Form.Control as="textarea" rows={4} className= "big-text" value={textValue} onChange={handleChange}/>
         </Col>
       </Form.Row>
-      <Button>
+      <Button onClick={translation}>
         Translate
       </Button>
       <Form.Row>
@@ -24,7 +37,7 @@ function App() {
             Translated Text
         </Form.Label>
         <Col>
-          <Form.Control as="textarea" rows={4}  className="big-text" readOnly>
+          <Form.Control as="textarea" rows={4}  value={translated} className="big-text" readOnly>
             
           </Form.Control>
         </Col>
