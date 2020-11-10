@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 import './App.css';
+import Col from 'react-bootstrap/esm/Col';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Form.Group>
+      <Form.Row>
+        <Form.Label column='lg' lg={2}>
+          Input Text
+        </Form.Label>
+        <Col>
+          <Form.Control as="textarea" rows={4} className= "big-text"/>
+        </Col>
+      </Form.Row>
+      <Button>
+        Translate
+      </Button>
+      <Form.Row>
+        <Form.Label column="lg" lg={2}>
+            Translated Text
+        </Form.Label>
+        <Col>
+          <Form.Control as="textarea" rows={4}  className="big-text" readOnly>
+            
+          </Form.Control>
+        </Col>
+      </Form.Row>
+    </Form.Group>
     </div>
   );
 }
