@@ -33,6 +33,10 @@
   width: 500px;
 }
 
+.nice-select {
+  height: 20px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
