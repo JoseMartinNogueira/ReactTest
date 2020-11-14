@@ -1,3 +1,16 @@
+# Contents
+
+This repository is divided into branches, each one corresponding to an exercise that I have come up with to learn React.
+
+- Main:
+  - Translator:
+    - Mimi-translator: replaces all vowels for 'i'. (Done)
+    - Real-translator: translates text. (Working on it)
+    - Sentiment-check: evaluates if a text as a positive or negative sentiment. (Done)
+    
+    
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
